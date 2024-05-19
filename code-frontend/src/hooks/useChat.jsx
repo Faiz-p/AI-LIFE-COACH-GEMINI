@@ -1,6 +1,7 @@
 import { createContext, useContext, useEffect, useState } from "react";
 
-const backendUrl = "http://localhost:3000";
+// Replace 'http://localhost:3000' with your Render URL
+const backendUrl = "https://your-backend-url.onrender.com";
 
 const ChatContext = createContext();
 
