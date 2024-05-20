@@ -14,7 +14,7 @@ app.use(cors({
   origin: 'https://ai-life-coach-gemini-9kbzs4j7x-faiz-ps-projects.vercel.app' // Replace with your actual Vercel URL
 }));
 
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 10000; 
 
 let conversationHistory = [];
 const entryPrompt = `
