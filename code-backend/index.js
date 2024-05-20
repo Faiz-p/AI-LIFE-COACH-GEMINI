@@ -11,7 +11,9 @@ const genAI = new GoogleGenerativeAI("AIzaSyAsZOMGQmUQK0da1pQwO9TK3hw2Bo6vKL4");
 const app = express();
 app.use(express.json());
 app.use(cors({
-  origin: 'https://ai-life-coach-gemini-5wjo5hr0u-faiz-ps-projects.vercel.app' 
+  origin: 'https://ai-life-coach-gemini-5wjo5hr0u-faiz-ps-projects.vercel.app', // Your Vercel frontend URL
+  methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+  allowedHeaders: 'Content-Type,Authorization'
 }));
 
 const port = process.env.PORT || 10000; 
