@@ -1,14 +1,14 @@
 import { createContext, useContext, useEffect, useState } from "react";
 
-// Replace 'http://localhost:3000' with your Render URL
-const backendUrl = "https://your-backend-url.onrender.com";
+import { BACKEND_URL } from "../../config";
+
 
 const ChatContext = createContext();
 
 export const ChatProvider = ({ children }) => {
   const chat = async (message) => {
     setLoading(true);
-    const data = await fetch(`${backendUrl}/chat`, {
+    const data = await fetch(`${BACKEND_URL}/chat`, {  
       method: "POST",
       headers: {
         "Content-Type": "application/json",
